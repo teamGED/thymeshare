@@ -35,34 +35,25 @@ main {
 }
 
 .about-body h4 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   letter-spacing: .2rem;
 }
 
-.article1 {
-  background-image: url('assets/dirty_hand.jpeg');
-  background-position: center center;
-  border-radius: 10%;
-  opacity: .7;
-  margin-right: 1rem;
-}
-.article2 {
-  background-image: url('assets/veg_basket.jpeg');
-  background-position: center center;
-  border-radius: 10%;
-  opacity: .7;
-  margin-right: 1rem;
+.about {
+  background-image: url('assets/carrot.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.article3 {
-  background-image: url('assets/tomato_share.jpeg');
-  background-position: center center;
-  border-radius: 10%;
-  opacity: .7;
+.about-container {
+  margin: 2rem 2rem 3rem 2rem;
 }
 
-.text {
-    color: #FFF;
-    opacity: 1;
-    position: relative;
+.btn-large {
+  padding: 1.2rem 5rem;
+  background-color: #DB324D;
+  text-transform: none;
+  font-size: 2rem;
+  vertical-align: text-top;
+
 }
