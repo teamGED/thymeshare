@@ -1,7 +1,7 @@
-const API_URL = "http://localhost:8080/api/v1/persons/";
+const API_URL = "http://localhost:8080/";
 
 $(document).ready(function(){
-  $.get(API_URL)
+  $.get(API_URL+ "/names")
   .then(names => {
     const $sellers = $('.sellerDisplayCards');
     names.forEach(names => {

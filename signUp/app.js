@@ -1,4 +1,4 @@
-const url = 'http://localhost:8080/api/v1/persons'
+const url = 'http://localhost:8080/api/v1/persons/signup'
 
 $(document).ready(function(){
       $('.modal').modal();
@@ -6,6 +6,7 @@ $(document).ready(function(){
 
 $('#buyerSignUp').click(function(event){
   event.preventDefault();
+  const url = 'http://localhost:8080/api/v1/persons'
     const seller = false;
     const name = $('#nameBuyer').val();
     const password = $('#passwordBuyer').val();
@@ -16,7 +17,7 @@ $('#buyerSignUp').click(function(event){
       name,
       email,
       password,
-    }; 
+    };
   $.post(url, newBuyerPost)
   .then(function(data) {
      console.log(data)
@@ -24,10 +25,10 @@ $('#buyerSignUp').click(function(event){
 })
 
 
-  function setIdRedirect() {
-    localStorage.user.id = result.id;
-    window.location = `/user/html?id=${result.id}`;
-  }
+  // function setIdRedirect() {
+  //   localStorage.user.id = result.id;
+  //   window.location = `/user/html?id=${result.id}`;
+  // }
 
 $('#sellerSignUp').click(function(event){
   event.preventDefault();
