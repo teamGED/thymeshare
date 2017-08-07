@@ -83,4 +83,3 @@ $(document).ready(() => {
     }
   // })
 })
->>>>>>> 1ce9a87798f4c92d47acaf736f6c6f10dbeda842
