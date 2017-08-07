@@ -39,11 +39,11 @@ main {
   letter-spacing: .2rem;
 }
 
-/*.about-body {
+.article1s {
   background-color: white;
-  opacity: .6;
-}*/
-
+  opacity: .7;
+  border-radius: 10%;
+}
 .about {
   background-image: url('assets/carrot.png');
   background-position: center;

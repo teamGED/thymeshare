@@ -17,7 +17,7 @@ $(document).ready(function(){
           <p>${names.item_name}</p>
         </div>
         <div class="card-action">
-          <a class="modal-trigger" href="#contact-modal">Contact ${names.person_name}</a>
+          <a class="modal-trigger" Zhref="#contact-modal">Contact ${names.person_name}</a>
         </div>
       </div>
     </div>
