@@ -4,11 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Thymeshare</title>
 </head>
+
 <body>
+
   <header>
     <nav class="grad">
       <div class="nav-wrapper">
@@ -16,17 +19,20 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a id="goToExplore" href="explore/index.html">Explore</a></li>
           <li><a id="signup" href="signUp/index.html">Sign Up</a></li>
-          <li><a  id="login"class="modal-trigger" href="#login-modal">Log In</a></li>
+          <li><a id="login" class="modal-trigger" href="#login-modal">Log In</a></li>
         </ul>
       </div>
     </nav>
   </header>
+
   <main>
+
     <section>
       <div class="parallax-container">
         <div class="parallax"><img src="assets/veggies.jpeg"></div>
       </div>
     </section>
+
     <section class="about">
       <div class="about-container">
         <div class="about-header row col s12 m12 l12">
@@ -39,8 +45,7 @@
               of local food. If we encourage and incentivize people to grow food we can have an entirely different (edible) urban landscape. One where you get to pick fruit and veg off the plant - not a shelf! And where your fresh food comes from a micro-farm,
               window garden, or fruit tree in your neighbour’s backyards.</p>
           </div>
-          <div class="article3 article
-        col s12 m4 l4">
+          <div class="article3 article col s12 m4 l4">
             <h4>Share Your Bounty</h4>
             <p class="text">We allow anyone to post food that they grow themselves, or post produce growing in public space. It’s free to add as many different food as you grow, and you decide whether to swap, sell or giveaway your spoils.We allow anyone to post food
               that they grow themselves, or post produce growing in public space. It’s free to add as many different food as you grow, and you decide whether to swap, sell or giveaway your spoils.We allow anyone to post food that they grow themselves,
@@ -55,45 +60,16 @@
         </div>
       </div>
     </section>
-    <section class='button-container'>
-      <div class="row">
-        <a class="waves-effect waves-light btn-large modal-trigger center" href="#modal1">Modal</a>
-        <div id="modal1" class="modal">
-          <div class="modal-content">
-            <h4>Modal Header</h4>
-            <p>A bunch of text</p>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sign Up</a>
-          </div>
-        </div>
-        <a class="waves-effect waves-light btn-large modal-trigger center" href="#login-modal">Log In</a>
-        <div id="login-modal" class="modal">
-          <div class="modal-content">
-            <div class="row">
-              <form class="col s12">
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
-                    <label for="email">Email</label>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
-                    <label for="password">Password</label>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Login In</a>
-    </div>
-    </div>
-</div>
+
+    <section class="button-container">
+      <div class="row container center">
+        <a class="waves-effect waves-light btn-large modal-trigger center white" href="explore/index.html" style="width:30vw"><strong>Explore</strong></a>
+        <a class="waves-effect waves-light btn-large modal-trigger center white" href="signUp/index.html" style="width:30vw"><strong>Sign Up</strong></a>
+      </div>
     </section>
+
   </main>
+
   <footer class="page-footer grad">
     <div class="container">
       <div class="row">
@@ -108,7 +84,8 @@
       </div>
     </div>
   </footer>
-  <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
   <script src="./app.js" charset="utf-8"></script>
 </body>
