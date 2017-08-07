@@ -1,27 +1,50 @@
-const API_URL = "http://localhost:8080/api/v1/persons";
 
-$(document).ready(function(){
-  $('.modal').modal();
-  $.get(API_URL+ "/names")
-  .then(names => {
-    const $sellers = $('.sellerDisplayCards');
-    names.forEach(names => {
-      $sellers.append(`<div class="col s12 m4 l4">
-    <div class="card horizontal">
-      <div class="card-image">
-        <img src="https://lorempixel.com/100/190/nature/6">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-        <h4 class="header">${names.person_name}</h4>
-          <p>${names.item_name}</p>
-        </div>
-        <div class="card-action">
-          <a class="modal-trigger" Zhref="#contact-modal">Contact ${names.person_name}</a>
-        </div>
-      </div>
-    </div>
-  </div>`)
-    })
-  })
-});
+const url =
+
+  (function() {
+    var map;
+
+    var mapOptions = {
+      zoom: 5,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      center: new google.maps.LatLng(39.7392, -104.9903)
+    };
+    map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        map.setCenter(geolocate);
+        map.setZoom(12);
+      });
+    }
+
+    function getAddress() {
+
+      var addressInput = '3611 osage st';
+
+      var geocoder = new google.maps.Geocoder();
+
+      geocoder.geocode({
+        address: addressInput
+      }, function(results, status) {
+
+        if (status == google.maps.GeocoderStatus.OK) {
+
+          var myResult = results[0].geometry.location; // reference LatLng value
+
+          createMarker(myResult); // call the function that adds the marker
+
+        }
+      });
+    }
+
+    function createMarker(latlng) {
+
+      marker = new google.maps.Marker({
+        map: map,
+        position: latlng
+      });
+
+    }
+  })();

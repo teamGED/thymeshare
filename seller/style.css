@@ -15,6 +15,7 @@ main {
   background: -moz-linear-gradient(right, #511C29, #DB324D); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to right, #511C29 , #DB324D); /* Standard syntax */
 }
+<<<<<<< HEAD
 
 .brand-logo {
   width: 40%;
@@ -26,3 +27,5 @@ main {
   background-position: center;
   background-repeat: no-repeat;
 }
+=======
+>>>>>>> 22fbe36b36351502549062db3721537a41b28b4d

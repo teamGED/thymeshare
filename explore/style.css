@@ -20,3 +20,16 @@ main {
   width: 40%;
   height:auto;
 }
+<<<<<<< HEAD
+=======
+
+#googleMap {
+  width: 100%;
+  height: 75vh;
+}
+
+#productSeperator {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
