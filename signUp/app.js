@@ -38,13 +38,16 @@ $('#sellerSignUp').click(function(event){
     const email = $('#email').val();
     const password = $('#password').val();
     const address = $('#address').val();
+    const item = $('#itemSelect option:selected').val();
+
 
     let newSellerPost = {
       seller,
       name,
       email,
       password,
-      address
+      address,
+      item
     };
     console.log(newSellerPost)
     $.post(url, newSellerPost)
