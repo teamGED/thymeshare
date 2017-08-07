@@ -2,6 +2,7 @@ const url = 'http://localhost:8080/api/v1/persons/signup'
 
 $(document).ready(function(){
       $('.modal').modal();
+      $('select').material_select();
     });
 
 $('#buyerSignUp').click(function(event){
