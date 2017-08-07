@@ -1,9 +1,10 @@
-
+var url = 'http://localhost:8080/api/v1/persons'
 $(document).ready(() => {
+  $('.modal').modal();
   (function() {
     var map
     var infowindow
-    var url = 'https://warm-tor-27276.herokuapp.com/'
+
     var mapOptions = {
       zoom: 4,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -60,9 +61,9 @@ $(document).ready(() => {
 
     }
   })();
-
-  // $.get(url).then((data) => {
-    for (var i = 0; i < 3; i++) {
+$.get(url+ "/names").then((names) => {
+    names.forEach(names => {
+      $('.modal').modal();
       $('#produceCards').append(`
         <div class="col s12 m4">
           <div class="card horizontal">
@@ -71,15 +72,16 @@ $(document).ready(() => {
             </div>
             <div class="card-stacked">
               <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
+              <h4 class="header">${names.person_name}</h4>
+              <p>${names.item_name}</p>
               </div>
               <div class="card-action">
-                <a href="#">Contact seller</a>
+                 <a class="modal-trigger" href="#contact-modal">Contact ${names.person_name}</a>
               </div>
             </div>
           </div>
         </div>
         `)
-    }
-  // })
+    })
+ })
 })
