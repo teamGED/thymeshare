@@ -1,4 +1,4 @@
-var url = 'http://localhost:8080/api/v1/persons'
+var url = 'https://warm-tor-27276.herokuapp.com/api/v1/persons'
 $(document).ready(() => {
   $('.modal').modal();
   (function() {

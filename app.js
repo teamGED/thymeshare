@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/api/v1/persons";
+const API_URL = "https://warm-tor-27276.herokuapp.com/api/v1/persons";
 
 $(document).ready(function(){
       $('.parallax').parallax();
