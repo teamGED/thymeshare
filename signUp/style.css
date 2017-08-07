@@ -30,14 +30,16 @@ main {
 }
 
 .signupBuyerSeller {
-  margin-top: 10%;
-  margin-left: 20%;
-  margin-bottom: 20%;
-  margin-right: 10%;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
 
 .btn-large {
-  font-size: 1.4rem;
+  color: #8c4053;
+  border: 3px solid #DB324D;
+  font-size: 1.5em;
+  margin: 1%;
+  width: 40vw;
 }
 
 h2 {

@@ -26,6 +26,7 @@ main {
   border: 3px solid #DB324D;
   font-size: 1.5em;
   margin: 2%;
+  width: 30vw;
 }
 
 .about-header, h1 {
