@@ -39,6 +39,11 @@ main {
   letter-spacing: .2rem;
 }
 
+/*.about-body {
+  background-color: white;
+  opacity: .6;
+}*/
+
 .about {
   background-image: url('assets/carrot.png');
   background-position: center;
@@ -50,10 +55,10 @@ main {
 }
 
 .btn-large {
-  padding: 1.2rem 5rem;
   background-color: #DB324D;
   text-transform: none;
-  font-size: 2rem;
-  vertical-align: text-top;
+}
 
+.button-container {
+  margin: 3rem;
 }

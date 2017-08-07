@@ -8,23 +8,19 @@
   <link rel="stylesheet" href="style.css">
   <title>Thymeshare</title>
 </head>
-
 <body>
-
-
   <header>
     <nav class="grad">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo"><img class="brand-logo" src="assets/ThymeShare_logo.png" alt="ThymeShare"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="explore/index.html">Explore</a></li>
-          <li><a href="signUp/index.html">Sign Up</a></li>
-          <li><a href="">Log In</a></li>
+          <li><a id="goToExplore" href="explore/index.html">Explore</a></li>
+          <li><a id="signup" href="signUp/index.html">Sign Up</a></li>
+          <li><a  id="login"class="modal-trigger" href="#login-modal">Log In</a></li>
         </ul>
       </div>
     </nav>
   </header>
-
   <main>
     <section>
       <div class="parallax-container">
@@ -60,47 +56,43 @@
         </div>
       </div>
     </section>
-    <section class="button-container">
+    <section class='button-container'>
       <div class="row">
-        <div class="col s12 m6 l6 center">
-          <a id="signup" class="waves-effect waves-light btn-large modal trigger" href="#signup-modal"></i>Sign Up</a>
-          <div id="signup-modal" class="modal">
-            <div class="modal-content">
-              <h4>Modal Header</h4>
-              <p>A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-            </div>
+        <a class="waves-effect waves-light btn-large modal-trigger center" href="#modal1">Modal</a>
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Sign Up</a>
           </div>
         </div>
-        <div class="col s12 m6 l6 center">
-          <a id="login" class="waves-effect waves-light btn-large modal trigger" href="#login-modal"></i>Log In</a>
-          <div id="login-modal" class="modal">
-            <div class="modal-content">
-              <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <input id="password" type="password" class="validate">
-                      <label for="password">Password</label>
-                    </div>
+        <a class="waves-effect waves-light btn-large modal-trigger center" href="#login-modal">Log In</a>
+        <div id="login-modal" class="modal">
+          <div class="modal-content">
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
                   </div>
-                </form>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
-                  <label for="email">Email</label>
                 </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
-        </div>
-      </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Login In</a>
+    </div>
+    </div>
+</div>
     </section>
   </main>
   <footer class="page-footer grad">
@@ -119,8 +111,7 @@
       </div>
     </div>
   </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
   <script src="./app.js" charset="utf-8"></script>
 </body>

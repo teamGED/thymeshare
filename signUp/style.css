@@ -7,3 +7,38 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.grad {
+  background: #511C29; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #511C29 , #DB324D); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #511C29, #DB324D); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #511C29, #DB324D); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #511C29 , #DB324D); /* Standard syntax */
+}
+
+.brand-logo {
+  width: 40%;
+  height:auto;
+}
+
+main {
+  background-image: url('../assets/carrot.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.signupBuyerSeller {
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-bottom: 20%;
+  margin-right: 10%;
+}
+
+.btn-large {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+
+}

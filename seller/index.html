@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
   <title>Thymeshare</title>
 </head>
 
@@ -14,8 +14,8 @@
 
   <header>
     <nav>
-      <div class="nav-wrapper green">
-        <a href="../index.html" class="brand-logo">ThymeShare</a>
+      <div class="nav-wrapper grad">
+        <a href="assets/ThymeShare_logo.png" class="brand-logo"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="../explore/index.html">Explore</a></li>
           <li><a href="../index.html">Log Out</a></li>
@@ -25,6 +25,100 @@
   </header>
 
   <main>
+    <section class="signupBuyerSeller">
+      <a class="waves-effect waves-light btn modal-trigger" href="#buyer-modal">Looking for Extra-Super-Duper Local Food</a>
+      <div id="buyer-modal" class="modal">
+        <div class="modal-content">
+          <h4>Modal Header</h4>
+          <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+
+      <a class="waves-effect waves-light btn modal-trigger" href="#seller-modal">I Have Extra Homegrown Produce to Share!</a>
+      <div id="seller-modal" class="modal">
+        <div class="modal-content">
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                  <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate">
+                  <label for="last_name">Last Name</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="password" type="password" class="validate">
+                  <label for="password">Password</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input id="address" type="text" class="validate">
+                  <label for="address">Address</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <select multiple>
+                    <option value="" disabled selected>What Do You Have to Share?</option>
+                    <option value="apples">Apples</option>
+                    <option value="apricots">Apricots</option>
+                    <option value="asparagus">Asparagus</option>
+                    <option value="apricots">Arugala</option>
+                    <option value="beets">Beets</option>
+                    <option value="apricots">Broccoli</option>
+                    <option value="asparagus">Brussels Sprouts</option>
+                    <option value="apples">Cabbage</option>
+                    <option value="apricots">Carrots</option>
+                    <option value="asparagus">Cauliflower</option>
+                    <option value="apples">Corn</option>
+                    <option value="apricots">Cucumber</option>
+                    <option value="asparagus">Eggplant</option>
+                    <option value="apples">Fennel</option>
+                    <option value="apricots">Green Beans</option>
+                    <option value="asparagus">Green Onions</option>
+                    <option value="apples">Kale</option>
+                    <option value="asparagus">Lettuce</option>
+                    <option value="apricots">Mushrooms</option>
+                    <option value="asparagus">Onions</option>
+                    <option value="apples">Peaches</option>
+                    <option value="apricots">Peas</option>
+                    <option value="asparagus">Peppers</option>
+                    <option value="apples">Plums</option>
+                    <option value="apricots">Pumpkins</option>
+                    <option value="asparagus">Radishes</option>
+                    <option value="apricots">Rhubarb</option>
+                    <option value="asparagus">Spinach</option>
+                    <option value="apples">Squash</option>
+                    <option value="apricots">Mushrooms</option>
+                    <option value="asparagus">Tomatos</option>
+                    <option value="apples">Zucchini</option>
+                  </select>
+                  <label>Create Account</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+        </div>
+      </div>
+
+    </section>
 
   </main>
 
@@ -39,8 +133,8 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2014 Copyright ThymeShare LLC
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        © 2014 Copyright ThymeShare LLC
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
       </div>
     </div>
   </footer>
