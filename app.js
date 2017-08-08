@@ -1,4 +1,4 @@
-const API_URL = "https://warm-tor-27276.herokuapp.com/api/v1/persons";
+const API_URL = "https://warm-tor-27276.herokuapp.com/api/v1/persons/login";
 // const parsedToken = parseJWT(token)
 
 $(document).ready(function() {
@@ -20,7 +20,7 @@ $('#validateLogin').click(function(event) {
     email,
     password
   }
-  $.post("http://localhost:8080/api/v1/persons/login", data)
+  $.post(API_URL, data)
     .then(response => {
       if (response.error) {
         alert(response.error)

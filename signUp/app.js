@@ -1,5 +1,5 @@
 
-const url = 'https://warm-tor-27276.herokuapp.com/api/v1/persons/signup'
+const API_URL = 'https://warm-tor-27276.herokuapp.com/api/v1/persons/seller/signup'
 
 
 $(document).ready(function(){
@@ -7,6 +7,7 @@ $(document).ready(function(){
       $('select').material_select();
     });
 
+<<<<<<< HEAD
 $('#buyerSignUp').click(function(event){
   event.preventDefault();
   const url = 'https://warm-tor-27276.herokuapp.com/api/v1/persons'
@@ -35,6 +36,8 @@ $('#buyerSignUp').click(function(event){
     window.location = `/${token.id}/profile`;
   }
 
+=======
+>>>>>>> CA
 $('#sellerSignUp').click(function(event){
   event.preventDefault();
     // const seller = true;
@@ -52,16 +55,32 @@ $('#sellerSignUp').click(function(event){
       address,
       item
     };
+<<<<<<< HEAD
     console.log(newSellerPost);
     $.post('https://warm-tor-27276.herokuapp.com/api/v1/persons/seller/signup', newSellerPost)
     .then(response => {
       clearInput();
       console.log(response);
+=======
+    $.post(API_URL, newSellerPost)
+    .then(response => {
+>>>>>>> CA
       localStorage.setItem('token', response.token)
       location.href = '../seller/index.html'
     }).catch(error => {
       console.log(error)
-    }) 
+    })
+});
+
+function clearInput () {
+  let inputs = $('form').find('input');
+  inputs.each(function(index) {
+    $(this).val('');
+  })
+}
+
+$('#seller_modal').on('hidden', function () {
+  clearInput();
 });
 
 function clearInput () {
