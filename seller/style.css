@@ -30,3 +30,7 @@ main {
 .container {
   background-color: white;
 }
+
+footer a {
+  color: white;
+}
