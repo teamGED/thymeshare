@@ -3,7 +3,11 @@ $(() => {
   $('select').material_select();
 
   const token = localStorage.getItem('token')
-//if token undefined redirect to main page
+
+  if (!token) {
+    location.href = '/'
+  };
+
   const parsedToken = parseJWT(token)
   $.ajax({
     method: 'GET',
@@ -52,10 +56,16 @@ $(() => {
         </select>
         <a id="updateProduce" href="#!" class="modal-action modal-close waves-effect waves-green btn white">Update Your Offering</a>
       </div>
+<<<<<<< HEAD
       </div>
     </div>
     `)
 })
+=======
+      </div>`
+      )
+    })
+>>>>>>> a90176e60a56caa838af68af21cc987f6bd225ad
 })
 
 function parseJWT(token) {
