@@ -15,9 +15,9 @@ $(() => {
 .then(person =>
 {
   console.log(person)
-  $('#profileSection').append(
-    `<h2>Welcome ${parsedToken.name}</h2>
-    <h6>Update Your Current Offering</h6>
+  $('#profileSection').append(`
+    <div id="seller" class="center">
+    <h2>Welcome ${parsedToken.name}</h2>
     <div class="row">
       <div class="input-field col s12">
         <select id="itemSelect">
@@ -50,10 +50,11 @@ $(() => {
           <option value="27">Tomatoes</option>
           <option value="12">Zucchini</option>
         </select>
-        <a id="updateProduce" href="#!" class="modal-action modal-close waves-effect waves-green btn ">Update Your Offering</a>
+        <a id="updateProduce" href="#!" class="modal-action modal-close waves-effect waves-green btn white">Update Your Offering</a>
       </div>
-      </div>`
-  )
+      </div>
+    </div>
+    `)
 })
 })
 

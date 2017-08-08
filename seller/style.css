@@ -3,10 +3,13 @@ body {
   min-height: 100vh;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
+  background: url('../assets/veg_basket.jpeg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 main {
   flex: 1 0 auto;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .grad {
@@ -22,11 +25,18 @@ main {
   height:auto;
 }
 
-main {
-  background-image: url('/..assets/veg_basket.jpeg')
-  background-position: center;
-  background-repeat: no-repeat;
+#seller {
+margin-top: 12%;
+color: white;
 }
-.container {
-  background-color: white;
+
+#seller h2 {
+  text-shadow: 2px 2px black;
+}
+
+.btn {
+  color: #8c4053;
+  border: 3px solid #DB324D;
+  font-size: 1.5em;
+  width: 25vw;
 }
