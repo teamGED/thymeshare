@@ -2,7 +2,8 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-color: lightgray
+  background-color: lightgray;
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {

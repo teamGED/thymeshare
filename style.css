@@ -1,7 +1,7 @@
 body {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {
@@ -16,13 +16,17 @@ main {
   background: linear-gradient(to right, #511C29 , #DB324D); /* Standard syntax */
 }
 
-.parallax-container {
-      height: "your height here";
-    }
-
 .brand-logo {
   width: 40%;
   height:auto;
+}
+
+.btn-large {
+  color: #8c4053;
+  border: 3px solid #DB324D;
+  font-size: 1.5em;
+  margin: 2%;
+  width: 30vw;
 }
 
 .about-header, h1 {
@@ -52,13 +56,5 @@ main {
 
 .about-container {
   margin: 2rem 2rem 3rem 2rem;
-}
-
-.btn-large {
-  background-color: #DB324D;
-  text-transform: none;
-}
-
-.button-container {
-  margin: 3rem;
+  background-color: rgba(255,255,255,0.7);
 }

@@ -8,11 +8,12 @@
   <link rel="stylesheet" href="style.css">
   <title>Thymeshare</title>
 </head>
+
 <body>
   <header>
     <nav>
       <div class="nav-wrapper grad">
-        <a href="#" class="brand-logo"><img class="brand-logo" src="../assets/ThymeShare_logo.png" alt="ThymeShare"></a>
+        <a href="../index.html" class="brand-logo"><img class="brand-logo" src="../assets/ThymeShare_logo.png" alt="ThymeShare"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="../explore/index.html">Explore</a></li>
           <li><a href="../index.html">Log Out</a></li>
@@ -20,8 +21,9 @@
       </div>
     </nav>
   </header>
+
   <main>
-    <section class="signupBuyerSeller">
+    <section class="signupBuyerSeller center">
       <div class="row">
         <div class="descriptionText">
           <div class="col s12 m6 l6">
@@ -32,69 +34,69 @@
           </div>
         </div>
       </div>
-      <div class="row">
-      <a class=" buyer-modal waves-effect waves-light btn-large modal-trigger center" href="#buyer-modal">Sign Up and Find Local Fare</a>
-      <div id="buyer-modal" class="modal">
-        <div class="modal-content">
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="nameBuyer" type="text" class="validate">
-                  <label for="nameBuyer">Name</label>
+      <div class="row center">
+        <a class=" buyer-modal waves-effect waves-light btn-large modal-trigger center white" href="#buyer-modal">Sign Up and Find Local Fare</a>
+        <div id="buyer-modal" class="modal">
+          <div class="modal-content">
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="nameBuyer" type="text" class="validate">
+                    <label for="nameBuyer">Name</label>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="emailBuyer" type="email" class="validate">
-                  <label for="emailBuyer">Email</label>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="emailBuyer" type="email" class="validate">
+                    <label for="emailBuyer">Email</label>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="passwordBuyer" type="password" class="validate">
-                  <label for="passwordBuyer">Password</label>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="passwordBuyer" type="password" class="validate">
+                    <label for="passwordBuyer">Password</label>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <a id="buyerSignUp" href="#!" class="modal-action modal-close waves-effect waves-green btn">Submit</a>
+            </div>
+          </div>
         </div>
-        <div class="modal-footer">
-          <a  id="buyerSignUp" href="#!" class="modal-action modal-close waves-effect waves-green btn">Submit</a>
-        </div>
-      </div>
-    </div>
-      <a class="seller-modal waves-effect waves-light btn-large modal-trigger center" href="#seller-modal">Sign Up and Post Your Produce</a>
-      <div id="seller-modal" class="modal">
-        <div class="modal-content">
-          <div class="row">
-            <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="name" type="text" class="validate">
-                  <label for="name">Name</label>
+        <a class="seller-modal waves-effect waves-light btn-large modal-trigger center white" href="#seller-modal" style="margin-left: 10%">Sign Up and Post Your Produce</a>
+        <div id="seller-modal" class="modal">
+          <div class="modal-content">
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Name</label>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="email" type="email" class="validate">
-                  <label for="email">Email</label>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="password" type="password" class="validate">
-                  <label for="password">Password</label>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <input id="address" type="text" class="validate">
-                  <label for="address">Address</label>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="address" type="text" class="validate">
+                    <label for="address">Address</label>
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <select id="itemSelect">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <select id="itemSelect">
                     <option value="" disabled selected>What Do You Have to Share?</option>
                     <option value="10">Apples</option>
                     <option value="11">Apricots</option>
@@ -124,16 +126,16 @@
                     <option value="27">Tomatoes</option>
                     <option value="12">Zucchini</option>
                   </select>
+                  </div>
                 </div>
-              </div>
-            </form>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a id="sellerSignUp" href="#!" class="modal-action modal-close waves-effect waves-green btn ">Submit</a>
           </div>
         </div>
-        <div class="modal-footer">
-          <a id="sellerSignUp" href="#!" class="modal-action modal-close waves-effect waves-green btn ">Submit</a>
-        </div>
       </div>
-            </div>
     </section>
 
   </main>
@@ -148,8 +150,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-
-      © 2017 Copyright ThymeShare LLC
+        © 2017 Copyright ThymeShare LLC
       </div>
     </div>
   </footer>

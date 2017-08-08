@@ -1,4 +1,4 @@
-var url = 'http://localhost:8080/api/v1/persons'
+var url = 'https://warm-tor-27276.herokuapp.com/api/v1/persons'
 $(document).ready(() => {
   $('.modal').modal();
   (function() {
@@ -21,18 +21,20 @@ $(document).ready(() => {
       });
     }
 
-    $.get(url).then((data) => {
+    $.get(url + '/names').then((data) => {
       for (var i = 0; i < data.length; i++) {
-        getAddress(data.address, data)
+        if (data[i].seller == true) {
+          getAddress(data[i].address, data[i])
+        }
       }
     })
 
-    function getAddress(address, content) {
+    function getAddress(userAddress, content) {
 
       var geocoder = new google.maps.Geocoder();
 
       geocoder.geocode({
-        address: address
+        address: userAddress
       }, function(results, status) {
 
         if (status == google.maps.GeocoderStatus.OK) {
@@ -47,6 +49,8 @@ $(document).ready(() => {
 
     function createMarker(latlng, content) {
 
+
+
       marker = new google.maps.Marker({
         map: map,
         position: latlng
@@ -54,26 +58,42 @@ $(document).ready(() => {
 
       google.maps.event.addListener(marker, 'click', (function(marker, content, infowindow) {
         return function() {
-          infowindow.setContent(content)
+          infowindow.setContent(`
+              <div class="card horizontal" style="width: 300px; margin: 0">
+                <div class="card-image">
+                  <img src="../assets/${content.item_name.replace(' ', '')}.jpg">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                  <h4 class="header">${content.person_name}</h4>
+                  <h6>has an excess of ${content.item_name}!</h6>
+                  </div>
+                  <div class="card-action">
+                     <a class="modal-trigger" href="#contact-modal">Contact ${content.person_name}</a>
+                  </div>
+                </div>
+              </div>
+            `)
           infowindow.open(map, marker)
         };
       })(marker, content, infowindow))
 
     }
   })();
+
 $.get(url+ "/names").then((names) => {
     names.forEach(names => {
       $('.modal').modal();
       $('#produceCards').append(`
-        <div class="col s12 m4">
+        <div class="col s12 m12 l4">
           <div class="card horizontal">
             <div class="card-image">
-              <img src="../assets/tomatos.jpeg">
+              <img style="max-height: 30vh" src="../assets/${names.item_name.replace(' ', '')}.jpg">
             </div>
             <div class="card-stacked">
               <div class="card-content">
               <h4 class="header">${names.person_name}</h4>
-              <p>${names.item_name}</p>
+              <h5>has extra ${names.item_name} to give away</h5>
               </div>
               <div class="card-action">
                  <a class="modal-trigger" href="#contact-modal">Contact ${names.person_name}</a>
