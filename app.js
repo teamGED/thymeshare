@@ -10,17 +10,7 @@ $(document).ready(function() {
 
 $('#signup').click(function(event) {
   event.preventDefault();
-  location.href = "seller/index.html";
-  //   event.preventDefault()
-  //   const user = getUserPersonForm();
-  //   signup(user)
-  //   .then(result => {
-  //  localStorage.token = result.token;
-  //     setIdredirect(result);
-  //   }).catch(error => {
-  //     console.error(error)
-  //     showErrorMessage(error.responseJSON.message)
-  //   })
+  location.href = "signUp/index.html";
 });
 
 function getPersonFromForm() {
@@ -51,23 +41,28 @@ $('#login').click(function(event) {
             localStorage.setItem('token', response.data)
             location.href = '../seller/index.html'
           }
-        }) $.ajax({
-          method: 'GET',
-          url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
-          headers: {
-            Authorization: `Bearer ${token}`
-          }
         })
-        })
-
-        function parseJWT (token) {
-            var base64Url = token.split('.')[1];
-            var base64 = base64Url.replace('-', '+').replace('_', '/');
-            return JSON.parse(window.atob(base64));
-                };
-    }
-    function setIdRedirect() {
-      console.log(localStorage.getItem('token'));
-      localStorage.user.id = token.id;
-      window.location = `/${token.id}/profile`;
-    }
+      })
+    //     }) $.ajax({
+    //       method: 'GET',
+    //       url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
+    //       headers: {
+    //         Authorization: `Bearer ${token}`
+    //       }
+    //     })
+    //
+    //     })
+    //
+    //     function parseJWT (token) {
+    //         var base64Url = token.split('.')[1];
+    //         var base64 = base64Url.replace('-', '+').replace('_', '/');
+    //         return JSON.parse(window.atob(base64));
+    //             };
+    // }
+    // function setIdRedirect() {
+    //   console.log(localStorage.getItem('token'));
+    //   localStorage.user.id = token.id;
+    //   window.location = `/${token.id}/profile`;
+    // }
+    //
+    // })
