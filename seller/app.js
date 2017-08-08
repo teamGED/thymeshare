@@ -5,7 +5,6 @@ $(() => {
   const token = localStorage.getItem('token')
 //if token undefined redirect to main page
   const parsedToken = parseJWT(token)
-  console.log(parsedToken);
   $.ajax({
     method: 'GET',
     url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
@@ -58,27 +57,29 @@ $(() => {
 })
 })
 
-function parseJWT (token) {
-    var base64Url = token.split('.')[1];
-    var base64 = base64Url.replace('-', '+').replace('_', '/');
-    return JSON.parse(window.atob(base64));
-        };
+function parseJWT(token) {
+  var base64Url = token.split('.')[1];
+  var base64 = base64Url.replace('-', '+').replace('_', '/');
+  return JSON.parse(window.atob(base64));
+};
 
-$(document).on('click', '#updateButton', function(){
-      event.PreventDefault();
-      let url = 'http://localhost:8080/api/v1/persons/'
-      let userId = req.params.id
-      let itemId = $('#itemSelect option:selected').val()
-      $.ajax({
-        url: url + userId + "/" +itemId,
-        method: 'PUT',
-      })
-     .then(function(){window.location.reload()});
-   });
+$(document).on('click', '#updateButton', function() {
+  event.PreventDefault();
+  let url = 'http://localhost:8080/api/v1/persons/'
+  let userId = req.params.id
+  let itemId = $('#itemSelect option:selected').val()
+  $.ajax({
+      url: url + userId + "/" + itemId,
+      method: 'PUT',
+    })
+    .then(function() {
+      window.location.reload()
+    });
+});
 
 
-$('#logout').click(function(event){
+$('#logout').click(function(event) {
   event.preventDefault();
   localStorage.removeItem('token')
-  location.href= '/'
+  location.href = '/'
 })
