@@ -10,17 +10,7 @@ $(document).ready(function() {
 
 $('#signup').click(function(event) {
   event.preventDefault();
-  location.href = "seller/index.html";
-  //   event.preventDefault()
-  //   const user = getUserPersonForm();
-  //   signup(user)
-  //   .then(result => {
-  //  localStorage.token = result.token;
-  //     setIdredirect(result);
-  //   }).catch(error => {
-  //     console.error(error)
-  //     showErrorMessage(error.responseJSON.message)
-  //   })
+  location.href = "signUp/index.html";
 });
 
 function getPersonFromForm() {
@@ -52,6 +42,4 @@ $('#login').click(function(event) {
             location.href = '/secrets.html'
           }
         })
-    }
-
-  
+    })
