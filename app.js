@@ -49,9 +49,25 @@ $('#login').click(function(event) {
             alert(response.error)
           } else {
             localStorage.setItem('token', response.data)
-            location.href = '/secrets.html'
+            location.href = '../seller/index.html'
+          }
+        }) $.ajax({
+          method: 'GET',
+          url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
+          headers: {
+            Authorization: `Bearer ${token}`
           }
         })
-    }
+        })
 
-  
+        function parseJWT (token) {
+            var base64Url = token.split('.')[1];
+            var base64 = base64Url.replace('-', '+').replace('_', '/');
+            return JSON.parse(window.atob(base64));
+                };
+    }
+    function setIdRedirect() {
+      console.log(localStorage.getItem('token'));
+      localStorage.user.id = token.id;
+      window.location = `/${token.id}/profile`;
+    }
