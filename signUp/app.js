@@ -32,3 +32,14 @@ $('#sellerSignUp').click(function(event){
       console.log(error)
     })
 });
+
+function clearInput () {
+  let inputs = $('form').find('input');
+  inputs.each(function(index) {
+    $(this).val('');
+  })
+}
+
+$('#seller_modal').on('hidden', function () {
+  clearInput();
+});
