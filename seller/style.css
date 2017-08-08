@@ -22,7 +22,10 @@ main {
 }
 
 main {
-  background-image: url('assets/beet.png')
+  background-image: url('/..assets/veg_basket.jpeg')
   background-position: center;
   background-repeat: no-repeat;
+}
+.container {
+  background-color: white;
 }
