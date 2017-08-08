@@ -23,10 +23,10 @@ $('#buyerSignUp').click(function(event){
     };
   $.post('https://warm-tor-27276.herokuapp.com/api/v1/persons/buyer/signup', newSellerPost)
   .then(response => {
-    localStorage.setItem('token', response.token)
+  localStorage.setItem('token', response.token)
    location.href = '../explore/index.html'
      //store token in local storage and redirect to profile page then profile page and profile page will need logic to get
-  }) .then(setIdRedirect)
+  })
 })
 
   function setIdRedirect() {
@@ -61,7 +61,7 @@ $('#sellerSignUp').click(function(event){
       location.href = '../seller/index.html'
     }).catch(error => {
       console.log(error)
-    }) .then(setIdRedirect)
+    }) 
 });
 
 function clearInput () {
