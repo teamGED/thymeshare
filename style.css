@@ -63,3 +63,12 @@ nav,h5 {
   margin: 2rem 2rem 3rem 2rem;
   background-color: rgba(255,255,255,0.7);
 }
+
+footer a {
+  color: white;
+}
+
+.team {
+  margin-right: 0rem;
+  margin-left: 1rem;
+}
