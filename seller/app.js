@@ -25,6 +25,16 @@ $(() => {
       <a id="updateProduce" href="#!" class="modal-action modal-close waves-effect waves-green btn white">Update Your Offering</a>
     </div>
     `)
+
+  $('#updateProduce').click((event) => {
+    event.preventDefault()
+    let userId = parsedToken.id
+    let itemId = parseInt($('#itemSelect option:selected').val())
+    $.ajax({
+      url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${userId}/${itemId}`,
+      type: 'PUT'
+    })
+  })
 })
 
 })
@@ -34,20 +44,6 @@ function parseJWT(token) {
   var base64 = base64Url.replace('-', '+').replace('_', '/');
   return JSON.parse(window.atob(base64));
 };
-
-$(document).on('click', '#updateButton', function() {
-  event.PreventDefault();
-  let url = 'https://warm-tor-27276.herokuapp.com/api/v1/persons/'
-  let userId = req.params.id
-  let itemId = $('#itemSelect option:selected').val()
-  $.ajax({
-      url: url + userId + "/" + itemId,
-      method: 'PUT',
-    })
-    .then(function() {
-      window.location.reload()
-    });
-});
 
 
 $('#logout').click(function(event) {
