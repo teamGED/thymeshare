@@ -25,15 +25,9 @@ $('#buyerSignUp').click(function(event){
   .then(response => {
   localStorage.setItem('token', response.token)
    location.href = '../explore/index.html'
-     //store token in local storage and redirect to profile page then profile page and profile page will need logic to get
+
   })
 })
-
-  // function setIdRedirect() {
-  //   console.log(localStorage.getItem('token'));
-  //   localStorage.user.id = token.id;
-  //   window.location = `/${token.id}/profile`;
-  // }
 
 $('#sellerSignUp').click(function(event){
   event.preventDefault();
@@ -52,13 +46,11 @@ $('#sellerSignUp').click(function(event){
       address,
       item
     };
-    console.log(newSellerPost);
     $.post('http://localhost:8080/api/v1/persons/seller/signup', newSellerPost)
     .then(response => {
-      console.log(response);
       localStorage.setItem('token', response.token)
       location.href = '../seller/index.html'
     }).catch(error => {
       console.log(error)
-    }) 
+    })
 });
