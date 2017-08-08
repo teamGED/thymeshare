@@ -7,7 +7,7 @@ $(() => {
   const parsedToken = parseJWT(token)
   $.ajax({
     method: 'GET',
-    url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
+    url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${parsedToken.id}/profile`,
     headers: {
       Authorization: `Bearer ${token}`
     }
@@ -65,7 +65,7 @@ function parseJWT(token) {
 
 $(document).on('click', '#updateButton', function() {
   event.PreventDefault();
-  let url = 'http://localhost:8080/api/v1/persons/'
+  let url = 'https://warm-tor-27276.herokuapp.com/api/v1/persons/'
   let userId = req.params.id
   let itemId = $('#itemSelect option:selected').val()
   $.ajax({

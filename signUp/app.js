@@ -21,7 +21,7 @@ $('#buyerSignUp').click(function(event){
       email,
       password,
     };
-  $.post('http://localhost:8080/api/v1/persons/buyer/signup', newSellerPost)
+  $.post('https://warm-tor-27276.herokuapp.com/api/v1/persons/buyer/signup', newSellerPost)
   .then(response => {
     localStorage.setItem('token', response.token)
    location.href = '../explore/index.html'
@@ -29,15 +29,15 @@ $('#buyerSignUp').click(function(event){
   }) .then(setIdRedirect)
 })
 
-  // function setIdRedirect() {
-  //   console.log(localStorage.getItem('token'));
-  //   localStorage.user.id = token.id;
-  //   window.location = `/${token.id}/profile`;
-  // }
+  function setIdRedirect() {
+    console.log(localStorage.getItem('token'));
+    localStorage.user.id = token.id;
+    window.location = `/${token.id}/profile`;
+  }
 
 $('#sellerSignUp').click(function(event){
   event.preventDefault();
-    const seller = true;
+    // const seller = true;
     const name = $('#name').val();
     const email = $('#email').val();
     const password = $('#password').val();
@@ -45,7 +45,7 @@ $('#sellerSignUp').click(function(event){
     const item = $('#itemSelect option:selected').val();
 
     let newSellerPost = {
-      seller,
+      // seller,
       name,
       email,
       password,
@@ -53,12 +53,24 @@ $('#sellerSignUp').click(function(event){
       item
     };
     console.log(newSellerPost);
-    $.post('http://localhost:8080/api/v1/persons/seller/signup', newSellerPost)
+    $.post('https://warm-tor-27276.herokuapp.com/api/v1/persons/seller/signup', newSellerPost)
     .then(response => {
+      clearInput();
       console.log(response);
       localStorage.setItem('token', response.token)
       location.href = '../seller/index.html'
     }).catch(error => {
       console.log(error)
     }) .then(setIdRedirect)
+});
+
+function clearInput () {
+  let inputs = $('form').find('input');
+  inputs.each(function(index) {
+    $(this).val('');
+  })
+}
+
+$('#seller_modal').on('hidden', function () {
+  clearInput();
 });
