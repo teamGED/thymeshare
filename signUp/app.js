@@ -25,7 +25,6 @@ $('#buyerSignUp').click(function(event){
   .then(response => {
   localStorage.setItem('token', response.token)
    location.href = '../explore/index.html'
-
   })
 })
 
