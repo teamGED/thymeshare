@@ -45,6 +45,23 @@ function parseJWT(token) {
   return JSON.parse(window.atob(base64));
 };
 
+<<<<<<< HEAD
+=======
+$(document).on('click', '#updateButton', function() {
+  event.PreventDefault();
+  let url = 'https://warm-tor-27276.herokuapp.com/api/v1/persons/'
+  let userId = req.params.id
+  let itemId = $('#itemSelect option:selected').val()
+  $.ajax({
+      url: url + userId + "/" + itemId,
+      method: 'PUT',
+    })
+    .then(function() {
+      window.location.reload()
+    });
+});
+
+>>>>>>> f2e722aa6c241471b0301acdd77a0bc776f10adb
 
 $('#logout').click(function(event) {
   event.preventDefault();
