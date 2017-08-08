@@ -1,14 +1,23 @@
 $(() => {
-  const token = localStorage.getItem('token')
+  $('.modal').modal();
+  $('select').material_select();
 
+  const token = localStorage.getItem('token')
+//if token undefined redirect to main page
   const parsedToken = parseJWT(token)
   console.log(parsedToken);
-$.get(`http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`)
+  $.ajax({
+    method: 'GET',
+    url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  })
 .then(person =>
 {
   console.log(person)
   $('#profileSection').append(
-    `<h2>Welcome ${person.name}</h2>
+    `<h2>Welcome ${parsedToken.name}</h2>
     <h6>Update Your Current Offering</h6>
     <div class="row">
       <div class="input-field col s12">
@@ -46,13 +55,6 @@ $.get(`http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`)
       </div>
       </div>`
   )
-})
-$.ajax({
-  method: 'GET',
-  url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
-  headers: {
-    Authorization: `Bearer ${token}`
-  }
 })
 })
 

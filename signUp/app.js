@@ -29,11 +29,11 @@ $('#buyerSignUp').click(function(event){
   }) .then(setIdRedirect)
 })
 
-  function setIdRedirect() {
-    console.log(localStorage.getItem('token'));
-    localStorage.user.id = token.id;
-    window.location = `/${token.id}/profile`;
-  }
+  // function setIdRedirect() {
+  //   console.log(localStorage.getItem('token'));
+  //   localStorage.user.id = token.id;
+  //   window.location = `/${token.id}/profile`;
+  // }
 
 $('#sellerSignUp').click(function(event){
   event.preventDefault();
