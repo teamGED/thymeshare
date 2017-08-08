@@ -21,51 +21,12 @@ $(() => {
   console.log(person)
   $('#profileSection').append(`
     <div id="seller" class="center">
-    <h2>Welcome ${parsedToken.name}</h2>
-    <div class="row">
-      <div class="input-field col s12">
-        <select id="itemSelect">
-          <option value="" disabled selected>What Do You Have to Share?</option>
-          <option value="10">Apples</option>
-          <option value="11">Apricots</option>
-          <option value="3">Arugala</option>
-          <option value="2">Beets</option>
-          <option value="5">Cabbage</option>
-          <option value="1">Carrots</option>
-          <option value="28">Corn</option>
-          <option value="14">Cucumber</option>
-          <option value="15">Eggplant</option>
-          <option value="29">Fennel</option>
-          <option value="8">Green Beans</option>
-          <option value="9">Green Onions</option>
-          <option value="18">Kale</option>
-          <option value="13">Lettuce</option>
-          <option value="6">Mushrooms</option>
-          <option value="22">Peaches</option>
-          <option value="21">Peas</option>
-          <option value="7">Peppers</option>
-          <option value="19">Plums</option>
-          <option value="20">Pumpkins</option>
-          <option value="23">Radishes</option>
-          <option value="24">Rhubarb</option>
-          <option value="4">Spinach</option>
-          <option value="25">Squash</option>
-          <option value="6">Mushrooms</option>
-          <option value="27">Tomatoes</option>
-          <option value="12">Zucchini</option>
-        </select>
-        <a id="updateProduce" href="#!" class="modal-action modal-close waves-effect waves-green btn white">Update Your Offering</a>
-      </div>
-<<<<<<< HEAD
-      </div>
+      <h2>Welcome ${parsedToken.name}</h2>
+      <a id="updateProduce" href="#!" class="modal-action modal-close waves-effect waves-green btn white">Update Your Offering</a>
     </div>
     `)
 })
-=======
-      </div>`
-      )
-    })
->>>>>>> a90176e60a56caa838af68af21cc987f6bd225ad
+
 })
 
 function parseJWT(token) {
