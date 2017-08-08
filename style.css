@@ -29,6 +29,10 @@ main {
   width: 30vw;
 }
 
+nav,h5 {
+  color: black;
+}
+
 .about-header, h1 {
   font-size: 5rem;
   letter-spacing: 1rem;

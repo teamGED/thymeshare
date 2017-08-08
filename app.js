@@ -1,60 +1,57 @@
 const API_URL = "https://warm-tor-27276.herokuapp.com/api/v1/persons";
 
-$(document).ready(function(){
-      $('.parallax').parallax();
-      $('.modal').modal();
-    });
+$(document).ready(function() {
+  $('.parallax').parallax();
+  $('.modal').modal();
+});
+
+
+
 
 $('#signup').click(function(event) {
-  vent.preventDefault();
+  event.preventDefault();
   location.href = "seller/index.html";
-      //   event.preventDefault()
-      //   const user = getUserPersonForm();
-      //   signup(user)
-      //   .then(result => {
-      //  localStorage.token = result.token;
-      //     setIdredirect(result);
-      //   }).catch(error => {
-      //     console.error(error)
-      //     showErrorMessage(error.responseJSON.message)
-      //   })
-      });
+  //   event.preventDefault()
+  //   const user = getUserPersonForm();
+  //   signup(user)
+  //   .then(result => {
+  //  localStorage.token = result.token;
+  //     setIdredirect(result);
+  //   }).catch(error => {
+  //     console.error(error)
+  //     showErrorMessage(error.responseJSON.message)
+  //   })
+});
 
-    function getBuyerFromForm() {
-      const buyerEmail = $('name').val();
-      const buyerPassword = $('name').val();
+function getPersonFromForm() {
+  const buyerEmail = $('#email').val();
+  const buyerPassword = $('#password').val();
 
-      let newSellerPost = {
-        is_seller: false,
-        name: buyerName,
-        email: bueyrEmail,
-        password: buyerPassword        // item_id: ??
+  let newBuyerPost = {
+    is_seller: false,
+    name: buyerName,
+    email: bueyrEmail,
+    password: buyerPassword // item_id: ??
+  }
+}
+
+$('#login').click(function(event) {
+      event.preventDefault()
+      const email = $('#email').val()
+      const password = $('#password').val()
+      const data = {
+        email,
+        password
       }
-    }
-
-    $('#login').click(function(event) {
-        event.preventDefault()
-        const user = getpersonFromForm();
-        login(person)
-        .then(result => {
-       localStorage.token = result.token;
-          setIdredirect(result);
-        }).catch(error => {
-          console.error(error)
-          showErrorMessage(error.responseJSON.message)
+      $.post("http://localhost:8080/api/v1/persons/login", data)
+        .then(response => {
+          if (response.error) {
+            alert(response.error)
+          } else {
+            localStorage.setItem('token', response.data)
+            location.href = '/secrets.html'
+          }
         })
-      });
-
-    function getPersonInfo(id){
-      return $.get({
-        url:`$API_URL/user${id}`,
-        headers: {
-          Authorization: `Bearer ${localStorage.token}`
-        }
-      })
     }
 
-// function setIdRedirect() {
-//   localStorage.user.id = result.id;
-//   window.location = / user/html?id=${result.id}
-// }
+  
