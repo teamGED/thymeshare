@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Neucha" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Damion|Kaushan+Script|Pacifico|Montserrat|Neucha" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Thymeshare</title>
@@ -26,7 +27,7 @@
                 <form class="col s12">
                   <div class="row">
                     <div class="input-field col s12">
-                      <h5>Enter Email and Passsword to Log In:</h5>
+                      <h5>Enter Email and Password to Log In:</h5>
                     </div>
                     <div class="row">
                       <div class="input-field col s12">
@@ -45,7 +46,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <a href="#!" class="modal-action modal-close waves-effect waves-green btn">Login</a>
+              <a id="validateLogin" href="#!" class="modal-action modal-close waves-effect waves-green btn">Login</a>
             </div>
           </div>
         </ul>
@@ -97,15 +98,31 @@
         <a class="waves-effect waves-light btn-large modal-trigger center white" href="signUp/index.html"><strong>Sign Up</strong></a>
       </div>
     </section>
-
   </main>
-
   <footer class="page-footer grad">
+    <div class="row">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
+        <div class="col l4 s8">
           <h5 class="white-text">Connect With Us!</h5>
+          <a href="https://github.com/teamGED/thymeshare"><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i> /teamGED/thymeshare</a>
         </div>
+        <div class="row team">
+        <div class="col l1 s4">
+          <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+        </div>
+          <div class="col l1 s4">
+            <a href="http://www.linkedin.com/in/ellen-downing" src="http://www.linkedin.com/in/ellen-downing"><img class="materialboxed" width="50px" src="assets/ellen.png" alt="Ellen"></a>
+          </div>
+          <div class="col l1 s4">
+            <a href="#"><img class="materialboxed" width="50px" src="assets/trenton.png" alt="Ellen"></a>
+          </div>
+          <div class="col l1 s4">
+            <a href="https://www.linkedin.com/in/connoralcock87/"><img class="materialboxed" width="50px" src="assets/connor.png" alt="Ellen"></a>
+          </div>
+          <div class="col l1 s4">
+            <a href="#"><img class="materialboxed" width="50px" src="assets/tyrel.png" alt="Ellen"></a>
+          </div>
+      </div>
       </div>
     </div>
     <div class="footer-copyright">
@@ -117,6 +134,7 @@
 
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  <script src="https://use.fontawesome.com/fe1d666f3b.js"></script>
   <script src="./app.js" charset="utf-8"></script>
 </body>
 
