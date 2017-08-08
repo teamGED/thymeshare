@@ -4,6 +4,7 @@ const API_URL = "https://warm-tor-27276.herokuapp.com/api/v1/persons";
 $(document).ready(function() {
   $('.parallax').parallax();
   $('.modal').modal();
+  $('.materialboxed').materialbox();
 });
 
 $('#signup').click(function(event) {
