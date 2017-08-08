@@ -3,20 +3,23 @@ $(() => {
   $('select').material_select();
 
   const token = localStorage.getItem('token')
-//if token undefined redirect to main page
+
+  if (!token) {
+    location.href = '/'
+  };
+  
   const parsedToken = parseJWT(token)
   $.ajax({
-    method: 'GET',
-    url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  })
-.then(person =>
-{
-  console.log(person)
-  $('#profileSection').append(
-    `<h2>Welcome ${parsedToken.name}</h2>
+      method: 'GET',
+      url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+    .then(person => {
+      console.log(person)
+      $('#profileSection').append(
+        `<h2>Welcome ${parsedToken.name}</h2>
     <h6>Update Your Current Offering</h6>
     <div class="row">
       <div class="input-field col s12">
@@ -53,8 +56,8 @@ $(() => {
         <a id="updateProduce" href="#!" class="modal-action modal-close waves-effect waves-green btn ">Update Your Offering</a>
       </div>
       </div>`
-  )
-})
+      )
+    })
 })
 
 function parseJWT(token) {
