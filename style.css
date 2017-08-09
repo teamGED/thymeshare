@@ -47,6 +47,8 @@ nav,h5 {
 .about-body h4 {
   font-size: 1.8rem;
   letter-spacing: .2rem;
+  padding-bottom: .3rem;
+  border-bottom: solid black;
 }
 
 .article1s {
