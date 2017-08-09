@@ -25,7 +25,7 @@ $('#validateLogin').click(function(event) {
         alert(response.error)
       } else {
         localStorage.setItem('token', response.data)
-        location.href = 'seller/index.html'
+        location.href = './seller/index.html'
       }
     })
 })
