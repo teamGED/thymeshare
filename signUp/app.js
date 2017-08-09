@@ -7,37 +7,6 @@ $(document).ready(function(){
       $('select').material_select();
     });
 
-<<<<<<< HEAD
-$('#buyerSignUp').click(function(event){
-  event.preventDefault();
-  const url = 'https://warm-tor-27276.herokuapp.com/api/v1/persons'
-    const seller = false;
-    const name = $('#nameBuyer').val();
-    const password = $('#passwordBuyer').val();
-    const email = $('#emailBuyer').val();
-
-    let newBuyerPost = {
-      seller,
-      name,
-      email,
-      password,
-    };
-  $.post('https://warm-tor-27276.herokuapp.com/api/v1/persons/buyer/signup', newSellerPost)
-  .then(response => {
-  localStorage.setItem('token', response.token)
-   location.href = '../explore/index.html'
-     //store token in local storage and redirect to profile page then profile page and profile page will need logic to get
-  })
-})
-
-  function setIdRedirect() {
-    console.log(localStorage.getItem('token'));
-    localStorage.user.id = token.id;
-    window.location = `/${token.id}/profile`;
-  }
-
-=======
->>>>>>> CA
 $('#sellerSignUp').click(function(event){
   event.preventDefault();
     // const seller = true;
@@ -55,16 +24,14 @@ $('#sellerSignUp').click(function(event){
       address,
       item
     };
-<<<<<<< HEAD
-    console.log(newSellerPost);
+
+    // $.post('http://localhost:8080/api/v1/persons/seller/signup', newSellerPost)
+
     $.post('https://warm-tor-27276.herokuapp.com/api/v1/persons/seller/signup', newSellerPost)
     .then(response => {
       clearInput();
-      console.log(response);
-=======
-    $.post(API_URL, newSellerPost)
-    .then(response => {
->>>>>>> CA
+    // $.post(API_URL, newSellerPost)
+    // .then(response => {
       localStorage.setItem('token', response.token)
       location.href = '../seller/index.html'
     }).catch(error => {

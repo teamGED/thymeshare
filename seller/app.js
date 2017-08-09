@@ -10,23 +10,32 @@ $(() => {
 
   const parsedToken = parseJWT(token)
   $.ajax({
-    method: 'GET',
-    url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${parsedToken.id}/profile`,
-    headers: {
-      Authorization: `Bearer ${token}`
-    }
-  })
-.then(person =>
-{
-  console.log(person)
-  $('#profileSection').append(`
+      method: 'GET',
+      // url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${parsedToken.id}/profile`,
+      url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${parsedToken.id}/profile`,
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
+    .then(person => {
+      $('#profileSection').append(`
     <div id="seller" class="center">
       <h2>Welcome ${parsedToken.name}</h2>
-      <a id="updateProduce" href="#!" class="modal-action modal-close waves-effect waves-green btn white">Update Your Offering</a>
     </div>
     `)
-})
 
+      $('#updateProduce').click((event) => {
+        event.preventDefault()
+        let userId = `${parsedToken.id}`
+        let itemId = parseInt($('#itemSelect option:selected').val())
+        $.ajax({
+          // url: `http://localhost:8080/api/v1/persons/${userId}/${itemId}`,
+
+          url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${userId}/${itemId}`,
+          type: 'PUT'
+        })
+      })
+    })
 })
 
 function parseJWT(token) {
@@ -35,20 +44,21 @@ function parseJWT(token) {
   return JSON.parse(window.atob(base64));
 };
 
-$(document).on('click', '#updateButton', function() {
-  event.PreventDefault();
-  let url = 'https://warm-tor-27276.herokuapp.com/api/v1/persons/'
-  let userId = req.params.id
-  let itemId = $('#itemSelect option:selected').val()
+$('#deleteMe').click(function(event) {
+  event.preventDefault();
+  const token = localStorage.getItem('token')
+  const parsedToken = parseJWT(token)
+  const id = `${parsedToken.id}`
+  console.log(id)
   $.ajax({
-      url: url + userId + "/" + itemId,
-      method: 'PUT',
-    })
-    .then(function() {
-      window.location.reload()
-    });
+    url: 'https://warm-tor-27276.herokuapp.com/api/v1/persons/' + id,
+    type: 'DELETE',
+    contentType: 'application/json'
+  }).then(function() {
+    window.location.reload();
+    location.href = '/'
+  });
 });
-
 
 $('#logout').click(function(event) {
   event.preventDefault();
