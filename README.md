@@ -23,7 +23,7 @@ Heroku
 ### Screenshots
 ![Landing](http://i.imgur.com/ytj8Uh6.jpg)
 ![Landing](http://i.imgur.com/rc2P1Yk.png)
-![Landing](http://i.imgur.com/d9PHCs0.jpg)
+![Landing](http://i.imgur.com/qvhl85U.jpg)
 ![Landing](http://i.imgur.com/ZcN4PHI.jpg)
 
 ### Video
