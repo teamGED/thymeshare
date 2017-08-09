@@ -36,7 +36,6 @@ $(() => {
         })
       })
     })
-
 })
 
 function parseJWT(token) {
@@ -57,9 +56,9 @@ $('#deleteMe').click(function(event) {
     contentType: 'application/json'
   }).then(function() {
     window.location.reload();
+    location.href = '/'
   });
 });
-
 
 $('#logout').click(function(event) {
   event.preventDefault();
