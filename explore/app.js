@@ -23,7 +23,7 @@ $(document).ready(() => {
 
     $.get(url + '/names').then((data) => {
       for (var i = 0; i < data.length; i++) {
-          getAddress(data[i].address, data[i])
+        getAddress(data[i].address, data[i])
       }
     })
 
@@ -98,5 +98,5 @@ $.get(url+ "/names").then((names) => {
         </div>
         `)
     })
- })
+  })
 })
