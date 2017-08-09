@@ -11,8 +11,7 @@ $(() => {
   const parsedToken = parseJWT(token)
   $.ajax({
       method: 'GET',
-      // url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${parsedToken.id}/profile`,
-      url: `http://localhost:8080/api/v1/persons/${parsedToken.id}/profile`,
+      url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${parsedToken.id}/profile`,
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -29,9 +28,7 @@ $(() => {
         let userId = `${parsedToken.id}`
         let itemId = parseInt($('#itemSelect option:selected').val())
         $.ajax({
-          url: `http://localhost:8080/api/v1/persons/${userId}/${itemId}`,
-
-          // url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${userId}/${itemId}`,
+          url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${userId}/${itemId}`,
           type: 'PUT'
         })
       })
@@ -49,9 +46,8 @@ $('#deleteMe').click(function(event) {
   const token = localStorage.getItem('token')
   const parsedToken = parseJWT(token)
   const id = `${parsedToken.id}`
-  console.log(id)
   $.ajax({
-    url: 'http://localhost:8080/api/v1/persons/' + id,
+    url: 'https://warm-tor-27276.herokuapp.com/api/v1/persons/' + id,
     type: 'DELETE',
     contentType: 'application/json'
   }).then(function() {

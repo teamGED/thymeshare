@@ -25,13 +25,9 @@ $('#sellerSignUp').click(function(event){
       item
     };
 
-    $.post('http://localhost:8080/api/v1/persons/seller/signup', newSellerPost)
-
-    // $.post('https://warm-tor-27276.herokuapp.com/api/v1/persons/seller/signup', newSellerPost)
+    $.post('https://warm-tor-27276.herokuapp.com/api/v1/persons/seller/signup', newSellerPost)
     .then(response => {
       clearInput();
-    // $.post(API_URL, newSellerPost)
-    // .then(response => {
       localStorage.setItem('token', response.token)
       location.href = '../seller/index.html'
     }).catch(error => {
