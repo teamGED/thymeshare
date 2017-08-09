@@ -65,11 +65,10 @@ nav,h5 {
   background-color: rgba(255,255,255,0.7);
 }
 
-footer a {
-  color: white;
+.btn {
+  background-color: #DB324D;
 }
 
-.team {
-  margin-right: 0rem;
-  margin-left: 1rem;
+footer a {
+  color: white;
 }

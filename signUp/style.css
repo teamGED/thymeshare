@@ -44,9 +44,6 @@ main {
 
 h2 {
   font-size: 2rem;
-  border-left: thick solid #DB324D;
-  border-right: thick solid #DB324D;
-  opacity: .6;
   padding: 1rem;
   border-radius: 30%;
   font-family: 'Kaushan Script', cursive;
