@@ -24,7 +24,7 @@ $('#sellerSignUp').click(function(event){
       address,
       item
     };
-    $.post(API_URL, newSellerPost)
+    $.post('http://localhost:8080/api/v1/persons/seller/signup', newSellerPost)
     .then(response => {
       localStorage.setItem('token', response.token)
       location.href = '../seller/index.html'
