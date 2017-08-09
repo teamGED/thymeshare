@@ -18,6 +18,6 @@ Firebase
 Heroku
 
 ## Screenshots
-![Landing](http://imgur.com/a/Czx7f)
+![Landing](http://i.imgur.com/ZJsZsnk.jpg)
 
 ## Video
