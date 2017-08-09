@@ -8,17 +8,7 @@ ThymeShare is a produce sharing application that helps to connect people who lik
 Nothing needs to be downloaded to use the app. If you wish to create a seller account you will need a valid email address.
 
 ### Technology used
-HTML
-JavaScript
-jQuery
-CSS
-Materialize
-Knex
-Express
-Postgres
-SQL
-Firebase
-Heroku
+HTML - JavaScript - jQuery - CSS - Materialize - Knex - Express - Postgres - SQL - Firebase - Heroku
 
 ### Screenshots
 ![Landing](http://i.imgur.com/ytj8Uh6.jpg)
@@ -30,3 +20,6 @@ Heroku
 
 ### License
 Everything used is publicly available and open source
+
+### Acknowledgements
+Thanks to Berto Ortega and Matt Winzer for their help and advice during the development of this app
