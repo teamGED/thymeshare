@@ -24,10 +24,6 @@ $('#sellerSignUp').click(function(event){
       address,
       item
     };
-<<<<<<< HEAD
-=======
-
->>>>>>> 447f5254e9482b15b951e2814082a644e72451bd
     $.post('https://warm-tor-27276.herokuapp.com/api/v1/persons/seller/signup', newSellerPost)
     .then(response => {
       clearInput();
