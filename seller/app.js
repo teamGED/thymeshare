@@ -28,6 +28,11 @@ $(() => {
         let userId = `${parsedToken.id}`
         let itemId = parseInt($('#itemSelect option:selected').val())
         $.ajax({
+<<<<<<< HEAD
+=======
+          // url: `http://localhost:8080/api/v1/persons/${userId}/${itemId}`,
+
+>>>>>>> 4e07bab2ca9fc6618de5aeec9384b82ce5312fd7
           url: `https://warm-tor-27276.herokuapp.com/api/v1/persons/${userId}/${itemId}`,
           type: 'PUT'
         })

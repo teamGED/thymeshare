@@ -12,6 +12,13 @@ main {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.profile {
+  background-color: black;
+  opacity: .8;
+  padding: 4rem;
+  width: 100%;
+}
+
 .grad {
   background: #511C29; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left, #511C29 , #DB324D); /* For Safari 5.1 to 6.0 */

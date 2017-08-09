@@ -34,6 +34,15 @@ main {
   font-size: 2em;
 }
 
+.btn {
+  background-color: #DB324D;
+  margin-right: 2rem;
+}
+
+nav,h5 {
+  color: black;
+}
+
 footer a {
   color: white;
 }

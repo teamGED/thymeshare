@@ -47,6 +47,8 @@ nav,h5 {
 .about-body h4 {
   font-size: 1.8rem;
   letter-spacing: .2rem;
+  padding-bottom: .3rem;
+  border-bottom: solid black;
 }
 
 .article1s {
@@ -65,11 +67,10 @@ nav,h5 {
   background-color: rgba(255,255,255,0.7);
 }
 
-footer a {
-  color: white;
+.btn {
+  background-color: #DB324D;
 }
 
-.team {
-  margin-right: 0rem;
-  margin-left: 1rem;
+footer a {
+  color: white;
 }
