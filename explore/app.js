@@ -23,9 +23,7 @@ $(document).ready(() => {
 
     $.get(url + '/names').then((data) => {
       for (var i = 0; i < data.length; i++) {
-        if (data[i].seller == true) {
-          getAddress(data[i].address, data[i])
-        }
+        getAddress(data[i].address, data[i])
       }
     })
 
@@ -42,14 +40,11 @@ $(document).ready(() => {
           var myResult = results[0].geometry.location;
 
           createMarker(myResult, content);
-
         }
       });
     }
 
     function createMarker(latlng, content) {
-
-
 
       marker = new google.maps.Marker({
         map: map,
@@ -103,7 +98,7 @@ $.get(url+ "/names").then((names) => {
         </div>
         `)
     })
- })
+  })
 })
 
 $('#signup').click(function(event) {
@@ -119,7 +114,7 @@ $('#validateLogin').click(function(event) {
     email,
     password
   }
-  $.post("https://warm-tor-27276.herokuapp.com/api/v1/persons/login", data)
+  $.post("https://cors-anywhere.herokuapp.com/https://warm-tor-27276.herokuapp.com/api/v1/persons/login", data)
     .then(response => {
       if (response.error) {
         alert(response.error)

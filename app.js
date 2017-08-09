@@ -1,4 +1,4 @@
-const API_URL = "https://warm-tor-27276.herokuapp.com/api/v1/persons/login";
+const API_URL = "https://cors-anywhere.herokuapp.com/https://warm-tor-27276.herokuapp.com/api/v1/persons/login";
 
 $(document).ready(function() {
   $('.parallax').parallax();
@@ -19,13 +19,13 @@ $('#validateLogin').click(function(event) {
     email,
     password
   }
-  $.post("https://warm-tor-27276.herokuapp.com/api/v1/persons/login", data)
+  $.post("https://cors-anywhere.herokuapp.com/https://warm-tor-27276.herokuapp.com/api/v1/persons/login", data)
     .then(response => {
       if (response.error) {
         alert(response.error)
       } else {
         localStorage.setItem('token', response.data)
-        location.href = '../seller/index.html'
+        location.href = './seller/index.html'
       }
     })
 })
