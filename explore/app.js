@@ -23,9 +23,7 @@ $(document).ready(() => {
 
     $.get(url + '/names').then((data) => {
       for (var i = 0; i < data.length; i++) {
-        if (data[i].seller == true) {
           getAddress(data[i].address, data[i])
-        }
       }
     })
 
@@ -42,14 +40,11 @@ $(document).ready(() => {
           var myResult = results[0].geometry.location;
 
           createMarker(myResult, content);
-
         }
       });
     }
 
     function createMarker(latlng, content) {
-
-
 
       marker = new google.maps.Marker({
         map: map,
