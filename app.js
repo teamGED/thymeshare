@@ -19,9 +19,9 @@ $('#validateLogin').click(function(event) {
     email,
     password
   }
-  // $.post("http://localhost:8080/api/v1/persons/login")
+  // $.post("http://localhost:8080/api/v1/persons/login", data)
   $.post("https://cors-anywhere.herokuapp.com/https://warm-tor-27276.herokuapp.com/api/v1/persons/login", data)
-    .then(response => {
+  .then(response => {
       if (response.error) {
         alert(response.error)
       } else {
